@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMAPP</title>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <header>
+      <i class="bi bi-arrow-repeat" style="color: #ffff"> Recuperar Contraseña</i>
+      <div> <a href="index.html">
+      <button style="display: block;
+      border: 0;
+      font-size: 1.25rem;
+      background-color: transparent;
+      color: #ffffff;
+      cursor: pointer;"><i class="bi bi-arrow-left"></i></button>
+      </a>
+    </div>
+  </header>
+
+  <form id="password-reset-form" style="margin-top: 15%; margin-left: 39%;">
+    <input type="email" id="email" placeholder=" Correo Electrónico" style="background: #ffffff;color: #000000; outline: none; font-weight: 300;font-size: 1rem; padding: .8em 0;border: none;border-radius: .5em; width: 100%;" required> <br><br>
+    <button type="submit" style="margin-left: 84px;">Recuperar Contraseña</button>
+  </form>
+  <div id="reset-status"></div>
+  
+<script src="R.js"></script>
+  </body>
+</html>

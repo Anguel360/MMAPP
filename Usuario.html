@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es-en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMAPP</title>
+    <script type="module" src="firebaseconect.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/P.css">
+    
+
+</head>
+<body>
+    <header>
+        <i class="bi bi-person-circle" style="color: #ffff"> Usuario</i>
+        <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
+        <nav class="nav" id="nav">
+            <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
+            <ul class="nav-list">
+                <li><a href="init.html">Inicio</a></li>
+                <li><a href="Categorias.html">Categorias</a></li>
+                <li><a href="Sube-tu-juego.html">Sube tu juego</a></li>
+                <li><a href="Usuario.html">Usuario</a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=61552624971450">Asistente</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content"> 
+
+        <main>
+            <h1>Editar perfil</h1>
+            <form method="post" action="#" enctype="multipart/form-data">
+              <div>
+                <img src="https://stonegatesl.com/wp-content/uploads/2021/01/avatar-300x300.jpg" alt="avatar" id="img" />
+                <input type="file" name="foto" id="foto" accept="image/*" />
+                <label for="foto" id="foto" style="background-color: #212E36;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                font-size: 18px;
+                cursor: pointer;">Cambiar foto</label>
+              </div>
+              <div>
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" autocomplete="off" style="background: #ffffff;color: #000000; outline: none; font-weight: 300;font-size: 1rem; padding: .8em 0;border: none;border-radius: .5em; width: 100%;"/>
+              </div>
+              <div>
+                <label for="apellido">Apellido</label>
+                <input type="text" name="apellido" autocomplete="off" style="background: #ffffff;color: #000000; outline: none; font-weight: 300;font-size: 1rem; padding: .8em 0;border: none;border-radius: .5em; width: 100%;" />
+              </div>
+        
+              <div>
+                <button type="submit">Guardar cambios</button>
+              </div>
+              
+            </form>
+          </main>
+<div>
+                <a href="index.html" id="Button-LogOut" class="hidden">
+                <button id="signout-button" style="
+                background-color: #212E36;
+                color: #ffff;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                font-size: 18px;
+                cursor: pointer;">Cerrar Sesión</button>
+                </a>
+              </div>
+        
+    </div>
+    <script src="user.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

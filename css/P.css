@@ -1,0 +1,31 @@
+main{
+    width: 90%;
+    margin: auto;
+    max-width: 400px;
+    padding: 4em 2em;
+    border-radius: 10px;
+    text-align: center;
+}
+  
+h1{
+    text-align: center;
+    color: #ffffff;
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: .2em;
+}
+
+
+  
+form img{
+    width: 200px;
+    border-radius: 50px;
+}
+  
+form div:first-child{
+    align-items: center;
+}
+  
+form div:first-child input{
+    display: none;
+}
+  

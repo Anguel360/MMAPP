@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es-en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MMAPP</title>
+        <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+        <script type="module" src="firebaseconect.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="/css/main.css">
+    </head>
+
+<doby>
+ <header>
+    <i class="bi bi-arrow-bar-up" style="color: #ffffff;"> Sube tu Juego</i>
+    <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
+    <nav class="nav" id="nav">
+        <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
+        <ul class="nav-list">
+          <li><a href="init.html">Inicio</a></li>
+          <li><a href="Categorias.html">Categorias</a></li>
+          <li><a href="Sube-tu-juego.html">Sube tu juego</a></li>
+          <li><a href="Usuario.html">Usuario</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=61552624971450">Asistente</a></li>
+        </ul>
+     </nav>
+  </header>
+
+ <div class="container-upload">
+    <form id="form" style="
+      margin: auto;
+      text-align: center;">
+    
+      <label for="app-name" style="font-size: large; padding: 0.5rem;">Nombre de la App:</label>
+      <input type="text" class="nameapp" id="appname" name="app-name" placeholder="Enter the app name" required>
+    
+      <label for="category">Categoria:</label>
+      <select id="category" name="category" class="category">
+            <option value="games">Juegos</option>
+            <option value="utilities">Utilidades</option>
+            <option value="social">Social</option>
+            <option value="entertainment">Entretenimiento</option>
+            <!-- Se puede agregar mas como desee xd -->
+        </select>
+    
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" class="description" placeholder=" Enter app description" required></textarea>
+    
+            <label for="upload-icon">Icono de la App:</label>
+            <input type="file" id="uploadicon" name="upload-icon" class="icongame" accept="image/*" required>
+    
+            <label for="upload-application">Selecciona la App:</label>
+            <input type="file" id="uploadApp" name="upload-App" class="apik" accept="apk,zip/*"required>
+    
+            <button type="submit" id="submit">Subir</button>
+    </form>
+ </div>
+
+        <script>
+              const firebaseConfig = {
+                apiKey: "AIzaSyB0SVG5NtzOGvKHtRhjLb8P0MEIRPdexaY",
+                authDomain: "inem-play-nube-75ead.firebaseapp.com",
+                projectId: "inem-play-nube-75ead",
+                storageBucket: "inem-play-nube-75ead.appspot.com",
+                messagingSenderId: "290494209807",
+                appId: "1:290494209807:web:b959d73e59e86cebc0a87a",
+                measurementId: "G-LQQXJZ4NXZ"
+            };
+
+            firebase.initializeApp(firebaseConfig);
+            
+
+        // Función para subir el archivo al almacenamiento de Firebase
+        function uploadFile() {
+            const storageRef = storage.ref().child("myimages");
+            const folderRef = storageRef.child(fileName);
+            const uploadtask = folderRef.put(file);
+            var appname = document.getElementById('appname').value;
+            var fileIcon = document.getElementById('uploadicon').files[0];
+            var fileApp = document.getElementById('uploadApp').files[0];
+
+            if (fileIcon && fileApp) {
+                var iconRef = storageRef.child('icons/' + appname + '/' + fileIcon.name);
+                var appRef = storageRef.child('apps/' + appname + '/' + fileApp.name);
+
+                // Subir el archivo de icono
+                iconRef.put(fileIcon).then(function(snapshot) {
+                    console.log('Icono subido correctamente.');
+                });
+
+                // Subir el archivo de la aplicación
+                appRef.put(fileApp).then(function(snapshot) {
+                    console.log('Aplicación subida correctamente.');
+
+                    // Crear una tarjeta en la página de inicio
+                    var card = document.createElement('div');
+                    card.innerHTML = `
+                        <img src="${snapshot.metadata.fullPath}" alt="Icono de la App">
+                        <h3>${appname}</h3>
+                        <a href="${snapshot.metadata.fullPath}" download>Descargar</a>
+                    `;
+
+                    // Agregar la tarjeta a la página de inicio (ajusta el selector a tu estructura HTML)
+                    var cardContainer = document.getElementById('cards-container');
+                    cardContainer.appendChild(card);
+                });
+            } else {
+                alert('Por favor, seleccione un icono y una aplicación para subir.');
+            }
+        }
+    </script>
+    <script src="main.js"></script>
+</doby>
+</html>

@@ -1,0 +1,36 @@
+.content {
+    background-color: #273139;
+    margin: auto;
+    width: 90%;
+    max-width: 400px;
+    padding: 4.5em 3em;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px -5px rgb(0 0 0 / 30%);
+    text-align: center;
+}
+
+.email {
+    width: 100%;
+    background: none;
+    color: #ffffff;
+    font-size: 1rem;
+    padding: .6em;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    border-bottom: 1px solid var(--color);
+}
+
+.resetbuton {
+    background: #192229;
+    color: #ffffff;
+    font-family: "roboto", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: .8em 0;
+    margin: 5px;
+    border: none;
+    border-radius: .5em;
+    width: 100%;
+}

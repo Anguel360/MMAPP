@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body {
+    background-color: #192229;
+    color: #ffffff;
+}
+
+.formulario-crearcuenta{
+    background-color: #273139;
+    margin: auto;
+    width: 90%;
+    max-width: 400px;
+    padding: 4.5em 3em;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px -5px rgb(0 0 0 / 30%);
+    text-align: center;
+}
+
+.formulario-iniciosesion {
+    background-color: #273139;
+    margin: auto;
+    width: 90%;
+    max-width: 400px;
+    padding: 4.5em 3em;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px -5px rgb(0 0 0 / 30%);
+    text-align: center;
+}
+
+h1{
+    font-family: "roboto", sans-serif;
+    font-size: 2rem;
+    margin-bottom: .5em;
+}
+
+.formulario-crear{
+    margin-top: 3em;
+    display: grid;
+    gap: 2.5em;
+}
+
+.formulario-sesion {
+    margin-top: 3em;
+    display: grid;
+    gap: 2.5em;
+}
+
+.camp-email {
+    width: 100%;
+    background: none;
+    color: #ffffff;
+    font-size: 1rem;
+    padding: .6em;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--color);
+    font-family: "roboto", sans-serif;
+}
+
+.camp-pas {
+    width: 100%;
+    background: none;
+    color: #ffffff;
+    font-size: 1rem;
+    padding: .6em;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--color);
+    font-family: "roboto", sans-serif;
+}
+
+.corr {
+    background: #ffffff;
+    color: #5a5555;
+    outline: none;
+    font-family: "roboto", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: .8em 0;
+    border: none;
+    border-radius: .5em;
+    width: 100%;
+    
+}
+
+.contra {
+    background: #ffffff;
+    color: #5a5555;
+    outline: none;
+    font-family: "roboto", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: .8em 0;
+    border: none;
+    border-radius: .5em;
+    width: 100%;
+}
+
+.subir {
+    background: #192229;
+    color: #ffffff;
+    font-family: "roboto", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: .8em 0;
+    border: none;
+    border-radius: .5em;
+    width: 100%;
+}
+
+.relogin {
+    color: #ffffff;
+    font-family: "roboto", sans-serif
+}

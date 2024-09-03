@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inem Play</title>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
+    <script type="module" src="firebaseconect.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/Inem-Play/css/main.css">
+    <link rel="stylesheet" href="/Inem-Play/css/Recup.css">
+  </head>
+  <body>
+
+    <div class="content">
+        <h1>Recuperar Contraseña</h1><br><br>
+     <input type="email" class="email" id="email" placeholder="Correo Electrónico" required>
+     <button class="resetbuton" id="reset-button">Recuperar Contraseña</button><br><br>
+     <a href="/Inem-Play/index.html" style="color: white;">Volver</a>
+    </div>
+  
+  <script src="main.js"></script>
+  
+  <script>
+
+const firebaseConfig = {
+  apiKey: "AIzaSyB0SVG5NtzOGvKHtRhjLb8P0MEIRPdexaY",
+  authDomain: "inem-play-nube-75ead.firebaseapp.com",
+  projectId: "inem-play-nube-75ead",
+  storageBucket: "inem-play-nube-75ead.appspot.com",
+  messagingSenderId: "290494209807",
+  appId: "1:290494209807:web:b959d73e59e86cebc0a87a",
+  measurementId: "G-LQQXJZ4NXZ"
+  };
+
+const emailInput = document.getElementById('email');
+const resetButton = document.getElementById('reset-button');
+
+resetButton.addEventListener('click', () => {
+  const email = emailInput.value;
+
+  firebase.auth().sendPasswordResetEmail(email)
+    .then(() => {
+      alert('Se ha enviado un correo electrónico para restablecer la contraseña.');
+    })
+    .catch((error) => {
+      console.error(error);
+      alert('Ha ocurrido un error. Por favor, verifica la dirección de correo electrónico.');
+    });
+});
+
+  
+  </script>
+
+  </body>
+</html>
