@@ -22,7 +22,7 @@
       <input type="email" id="email" class="corr" name="email"><br><br>
       
       <label for="password" class="camp-pas">Contraseña:</label>
-      <input type="password" id="password" class="contra" name="password"><br><br>
+      <input type="password" id="password" class="contra" name="password"><input type="checkbox" onclick="ShowPwd()"> <br><br>
       
       <input type="submit" class="subir" value="Registrarse">
 
@@ -30,6 +30,17 @@
       <br>
     <a href="index.html" class="relogin">¡Ya tengo una cuenta!</a>
   </section>
+
+  <script>
+    const ShowPwd = () => {
+      let input = document.querySelector("#password")
+      if (input.type === "password") {
+        input.type = "text"
+      } else {
+        input.type = "password"
+      }
+    }
+  </script>
 
 </body>
 </html>

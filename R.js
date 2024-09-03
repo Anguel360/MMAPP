@@ -1,11 +1,11 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyB0SVG5NtzOGvKHtRhjLb8P0MEIRPdexaY",
-    authDomain: "inem-play-nube-75ead.firebaseapp.com",
-    projectId: "inem-play-nube-75ead",
-    storageBucket: "inem-play-nube-75ead.appspot.com",
-    messagingSenderId: "290494209807",
-    appId: "1:290494209807:web:b959d73e59e86cebc0a87a",
-    measurementId: "G-LQQXJZ4NXZ"
+  apiKey: "AIzaSyBya6-AGSpMj2EocYtMO_pIWXjJSTnAfxc",
+  authDomain: "mmapp-65184.firebaseapp.com",
+  projectId: "mmapp-65184",
+  storageBucket: "mmapp-65184.appspot.com",
+  messagingSenderId: "1033174081309",
+  appId: "1:1033174081309:web:e825e4f34d415adae84bf4",
+  measurementId: "G-E6XXYMXC3R"
 };
 
 firebase.initializeApp(firebaseConfig);

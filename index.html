@@ -23,7 +23,7 @@
           <input type="email" id="email" class="corr" name="email"><br><br>
           
           <label for="password" class="camp-pas">Contraseña:</label>
-          <input type="password" id="password" class="contra" name="password"><br><br>
+          <input type="password" id="password" class="contra" name="password"><input type="checkbox" onclick="ShowPwd()"><br><br>
           
           <input type="submit" id="btn-login" class="subir" value="Iniciar sesión">
       </form>
@@ -31,6 +31,17 @@
     <a href="Sing-Up.html" class="relogin">Crear una nueva cuenta</a><br><br>
     <a href="RecuperacionAuth.html" class="relogin">¿Olvido su contraseña?</a>
   </section>
+
+  <script>
+    const ShowPwd = () => {
+      let input = document.querySelector("#password")
+      if (input.type === "password") {
+        input.type = "text"
+      } else {
+        input.type = "password"
+      }
+    }
+  </script>
 
 </body>
 </html>
