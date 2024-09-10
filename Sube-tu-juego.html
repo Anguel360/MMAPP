@@ -57,60 +57,6 @@
             <button type="submit" id="submit">Subir</button>
     </form>
  </div>
-
-        <script>
-  const firebaseConfig = {
-    apiKey: "AIzaSyBya6-AGSpMj2EocYtMO_pIWXjJSTnAfxc",
-    authDomain: "mmapp-65184.firebaseapp.com",
-    projectId: "mmapp-65184",
-    storageBucket: "mmapp-65184.appspot.com",
-    messagingSenderId: "1033174081309",
-    appId: "1:1033174081309:web:e825e4f34d415adae84bf4",
-    measurementId: "G-E6XXYMXC3R"
-  };
-
-            firebase.initializeApp(firebaseConfig);
-            
-
-        // Función para subir el archivo al almacenamiento de Firebase
-        function uploadFile() {
-            const storageRef = storage.ref().child("myimages");
-            const folderRef = storageRef.child(fileName);
-            const uploadtask = folderRef.put(file);
-            var appname = document.getElementById('appname').value;
-            var fileIcon = document.getElementById('uploadicon').files[0];
-            var fileApp = document.getElementById('uploadApp').files[0];
-
-            if (fileIcon && fileApp) {
-                var iconRef = storageRef.child('icons/' + appname + '/' + fileIcon.name);
-                var appRef = storageRef.child('apps/' + appname + '/' + fileApp.name);
-
-                // Subir el archivo de icono
-                iconRef.put(fileIcon).then(function(snapshot) {
-                    console.log('Icono subido correctamente.');
-                });
-
-                // Subir el archivo de la aplicación
-                appRef.put(fileApp).then(function(snapshot) {
-                    console.log('Aplicación subida correctamente.');
-
-                    // Crear una tarjeta en la página de inicio
-                    var card = document.createElement('div');
-                    card.innerHTML = `
-                        <img src="${snapshot.metadata.fullPath}" alt="Icono de la App">
-                        <h3>${appname}</h3>
-                        <a href="${snapshot.metadata.fullPath}" download>Descargar</a>
-                    `;
-
-                    // Agregar la tarjeta a la página de inicio (ajusta el selector a tu estructura HTML)
-                    var cardContainer = document.getElementById('cards-container');
-                    cardContainer.appendChild(card);
-                });
-            } else {
-                alert('Por favor, seleccione un icono y una aplicación para subir.');
-            }
-        }
-    </script>
     <script src="main.js"></script>
 </doby>
 </html>
