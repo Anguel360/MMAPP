@@ -1,9 +1,9 @@
 .container{
-  width: 90%;
+  width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;  
-  padding: 5px 70px;
+  padding: 7px 70px;
   box-sizing: border-box;
 }
 
@@ -19,7 +19,6 @@
   background: #575050;
   border-radius: 15px;
   text-align: start;
- 
 }
 
 .container .swiper-slide img{
@@ -28,7 +27,6 @@
     height: 180px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-
 }
 
 .container .swiper-slide .card-description{

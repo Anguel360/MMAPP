@@ -7,6 +7,7 @@
     <title>MMAPP</title>
     <script type="module" src="firebaseconect.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/category.css">
     <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
@@ -26,8 +27,35 @@
         </nav>
     </header>
 
-    <div class="content">
-    </div>
+    	
+    <div class="wrapper">
+        <div id="search-container">
+          <input
+            type="search"
+            id="search-input"
+            placeholder="Search product name here.."
+          />
+          <button id="search">Search</button>
+        </div>
+        <div id="buttons">
+          <button class="button-value" onclick="filterProduct('all')">Todo</button>
+          <button class="button-value" onclick="filterProduct('Juegos')">
+            Juegos
+          </button>
+          <button class="button-value" onclick="filterProduct('Utilidades')">
+            Utilidades
+          </button>
+          <button class="button-value" onclick="filterProduct('Social')">
+            Social
+          </button>
+          <button class="button-value" onclick="filterProduct('Entretenimiento')">
+            Entretenimiento
+          </button>
+        </div>
+        <div id="products"></div>
+      </div>
+
     <script src="main.js"></script>
+    <script src="category.js"></script>
 </body>
 </html>
